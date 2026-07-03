@@ -118,7 +118,7 @@ export default function Servicos() {
         {servicos.map((eq) => (
           <li key={eq.servicos_id}>
             (ID: {eq.servicos_id}) - <strong>{eq.nome}</strong> - Descrição:{" "}
-            {eq.descricao} - Preço: {eq.preco} - Duração: {eq.duracao} - Setor:{" "}
+            {eq.descricao} - Preço: R${eq.preco} - Duração: {eq.duracao} - Setor:{" "}
             {eq.setor} - Cidade: {eq.cidade_nome}
           </li>
         ))}
