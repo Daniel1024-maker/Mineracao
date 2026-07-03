@@ -107,7 +107,7 @@ export default function Funcionarios() {
         {funcionarios.map((eq) => (
           <li key={eq.funcionarios_id}>
             (ID: {eq.funcionarios_id}) - <strong>{eq.nome}</strong> - Cargo:
-            {eq.cargo} - Salário: {eq.salario} - Telefone: {eq.telefone} -
+            {eq.cargo} - Salário:R$ {eq.salario} - Telefone: {eq.telefone} -
             Cidade:
             {eq.nome_cidade}
           </li>
