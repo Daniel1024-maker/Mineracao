@@ -9,14 +9,6 @@ export const funcionarioService = {
   async criar(funcionario) {
     return await supabase.from("funcionarios").insert([funcionario]);
   },
-
-  async atualizar(id, funcionario) {
-    return await supabase.from("funcionarios").update(funcionario).eq("id", id);
-  },
-
-  async excluir(id) {
-    return await supabase.from("funcionarios").delete().eq("id", id);
-  },
 };
 
 //Equipamento
@@ -27,14 +19,6 @@ export const equipamentoService = {
 
   async criar(equipamento) {
     return await supabase.from("equipamentos").insert([equipamento]);
-  },
-
-  async atualizar(id, equipamento) {
-    return await supabase.from("equipamentos").update(equipamento).eq("id", id);
-  },
-
-  async excluir(id) {
-    return await supabase.from("equipamentos").delete().eq("id", id);
   },
 };
 
@@ -47,14 +31,6 @@ export const cidadeService = {
   async criar(cidade) {
     return await supabase.from("cidades").insert([cidade]);
   },
-
-  async atualizar(id, cidade) {
-    return await supabase.from("cidades").update(cidade).eq("id", id);
-  },
-
-  async excluir(id) {
-    return await supabase.from("cidades").delete().eq("id", id);
-  },
 };
 
 //Serviço
@@ -65,13 +41,5 @@ export const servicoService = {
 
   async criar(servico) {
     return await supabase.from("servicos").insert([servico]);
-  },
-
-  async atualizar(id, servico) {
-    return await supabase.from("servicos").update(servico).eq("id", id);
-  },
-
-  async excluir(id) {
-    return await supabase.from("servicos").delete().eq("id", id);
   },
 };

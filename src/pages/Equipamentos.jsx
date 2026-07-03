@@ -70,6 +70,7 @@ export default function Equipamentos() {
           onChange={(e) => setSetor(e.target.value)}
           style={{ marginRight: "10px" }}
         />
+        <br />
         <button onClick={cadastrar}>Cadastrar</button>
       </div>
       <h3>Equipamentos Cadastrados</h3>

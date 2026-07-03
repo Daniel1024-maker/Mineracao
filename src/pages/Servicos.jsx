@@ -3,8 +3,8 @@ import { servicoService } from "../services/api";
 export default function Servicos() {
   const [servicos, setServicos] = useState([]);
   const [nome, setNome] = useState("");
-  //const [setor, setSetor] = useState("");
-  //const [cidade, setCidade] = useState("");
+  const [setor, setSetor] = useState("");
+  const [cidade_nome, setCidade_nome] = useState("");
   const [descricao, setDescricao] = useState("");
   const [preco, setPreco] = useState("");
   const [duracao, setDuracao] = useState("");
@@ -38,6 +38,8 @@ export default function Servicos() {
       descricao,
       preco,
       duracao,
+      setor,
+      cidade_nome,
     });
 
     if (error) {
@@ -49,6 +51,8 @@ export default function Servicos() {
     setDescricao("");
     setPreco("");
     setDuracao("");
+    setSetor("");
+    setCidade_nome("");
     carregarServicos();
   };
   return (
@@ -84,6 +88,7 @@ export default function Servicos() {
           onChange={(e) => setPreco(e.target.value)}
           style={{ marginRight: "10px" }}
         />
+        <br />
         <input
           type="text"
           placeholder="Duração (AA/MM/DD)"
@@ -91,6 +96,21 @@ export default function Servicos() {
           onChange={(e) => setDuracao(e.target.value)}
           style={{ marginRight: "10px" }}
         />
+        <input
+          type="text"
+          placeholder="Setor"
+          value={setor}
+          onChange={(e) => setSetor(e.target.value)}
+          style={{ marginRight: "10px" }}
+        />
+        <input
+          type="text"
+          placeholder="Nome da Cidade"
+          value={cidade_nome}
+          onChange={(e) => setCidade_nome(e.target.value)}
+          style={{ marginRight: "10px" }}
+        />
+        <br />
         <button onClick={cadastrar}>Cadastrar</button>
       </div>
       <h3>Serviços Cadastrados</h3>
@@ -98,7 +118,8 @@ export default function Servicos() {
         {servicos.map((eq) => (
           <li key={eq.servicos_id}>
             (ID: {eq.servicos_id}) - <strong>{eq.nome}</strong> - Descrição:{" "}
-            {eq.descricao} - Preço: {eq.preco} - Duração: {eq.duracao}
+            {eq.descricao} - Preço: {eq.preco} - Duração: {eq.duracao} - Setor:{" "}
+            {eq.setor} - Cidade: {eq.cidade_nome}
           </li>
         ))}
       </ul>

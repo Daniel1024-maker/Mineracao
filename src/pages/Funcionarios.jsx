@@ -99,6 +99,7 @@ export default function Funcionarios() {
           onChange={(e) => setNome_cidade(e.target.value)}
           style={{ marginRight: "10px" }}
         />
+        <br />
         <button onClick={cadastrar}>Cadastrar</button>
       </div>
       <h3>Funcionários Cadastrados</h3>

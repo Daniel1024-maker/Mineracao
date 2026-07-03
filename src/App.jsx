@@ -12,7 +12,7 @@ function App() {
       style={{
         fontFamily: "Arial",
         padding: "20px",
-        maxWidth: "800px",
+        maxWidth: "900px",
         margin: "0 auto",
       }}
     >

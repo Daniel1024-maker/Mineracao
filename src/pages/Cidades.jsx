@@ -59,6 +59,7 @@ export default function Cidades() {
           onChange={(e) => setNome(e.target.value)}
           style={{ marginRight: "10px" }}
         />
+        <br />
         <button onClick={cadastrar}>Cadastrar</button>
       </div>
       <h3>Cidades Cadastradas</h3>
